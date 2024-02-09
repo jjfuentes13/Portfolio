@@ -6,76 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaime Fuentes - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <!-- Add CSS file or inline styles  -->
 </head>
 
 <body>
-    <header>
-        <h1>Jaime Fuentes</h1>
-        <ul class="navLinks">
-            <li><a href="#bio">Bio</a></li>
-            <li><a href="#job-role">Job Role</a></li>
-            <li><a href="#projectOne">Project One</a></li>
-            <li><a href="#projectTwo">Project Two</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-        </ul>
-    </header>
+    <nav id="desktopNav">
+        <div><h1>Jaime Fuentes</h1></div>
+            <div><ul class="navLinks">
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#job-role">Job Role</a></li>
+                <li><a href="#projectOne">Project One</a></li>
+                <li><a href="#projectTwo">Project Two</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+            </ul></div>
+    </nav>
 
-    <!-- <section id="bio">
-        <p>
-            As a versatile software developer with a distinctive blend of 8 years in accounting and 5 years of software development expertise at Infor, I possess a unique understanding 
-            of projects' business and technical aspects. My accounting background has enabled me to optimize accounting processes through Excel macros and ensure data consistency across 
-            diverse software solutions. By completing a range of courses on Udemy, such as Data Structures and Algorithms, JavaScript, Flutter, Web and Mobile Design UI/UX, Graphic Design, 
-            and Adobe Photoshop, I have further enhanced my design and development capabilities and deepened my understanding of UX principles. My participation in frontendmentor.com 
-            challenges and real-world projects like the Bellum's attendance app has allowed me to refine and apply the skills acquired through these courses.
-        </p>
-        <p> I am adept at using Git for version control, consistently completing tasks before sprint deadlines, and collaborating effectively with technical and non-technical stakeholders 
-            to achieve project success. My current goal is to refine my design and development skills to create user-friendly, high-quality software solutions that address users' needs.
-        </p>
-    </section>
-
-    <section id="job-role">
-        <h3>Infor - Enterprise Cloud Software Company</h3>
-        <p> 
-            Throughout my 5-year tenure at Infor, I have played a significant role in various projects, such as developing a reconciliation module and a comprehensive UI overhaul to 
-            ensure a seamless user experience across all modules. In my current role, I am focused on the general ledger module, responsible for UI and UX enhancements, bug fixes, 
-            and developing new features, including configurable cube reports with diverse comparison options.
-        </p>
-    </section> -->
-
-    <!-- <section id="apps">
-        <h3>Projects</h3>
-
-        <div class="app">
-            <h4>Bellum Brazilian Jiu Jitsu</h4>
-            <h5>An Attendance App</h5>
-            <p>
-                In response to the challenges a local BJJ gym faces in tracking and promoting students, I designed and developed a custom attendance app, the Bellum Gym Attendance App. 
-                The app streamlines the process of tracking student attendance by allowing parents and instructors to check in their children or students for each class easily. 
-                The app improves the efficiency of tracking attendance and assists the gym owner and head instructor in monitoring progress and determining when to promote students based 
-                on the number of classes attended. Throughout the development process, I collaborated closely with the gym owner and their staff, gathering feedback and iterating on 
-                the app's design to create a user-friendly and effective solution. The Bellum Gym Attendance App is now available on the Google Play Store.
-            </p>
+    <nav id="mobileNav">
+        <div><h1>Jaime Fuentes</h1></div>
+        <div class="hamburgerMenu">
+            <div class="hamburgerIcon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menuLinks">
+                <li><a href="#bio" onclick="toggleMenu()">Bio</a></li>
+                <li><a href="#job-role" onclick="toggleMenu()">Job Role</a></li>
+                <li><a href="#projectOne" onclick="toggleMenu()">Project One</a></li>
+                <li><a href="#projectTwo" onclick="toggleMenu()">Project Two</a></li>
+                <li><a href="#hobbies" onclick="toggleMenu()">Hobbies</a></li>
+            </div>
         </div>
-
-        <div class="app">
-            <h4>App 2</h4>
-            <p>
-                
-            </p>
+    </nav>
+      
+    <section id="mobileBio">
+        <div class="profilePicContainer">
+            <div><h4>Hello!</h4></div>
+            <div><img src="images/jaime.jpg" alt="Profile Picture" class="bioPic"/></div>
+        </div>
+        <p>My name is Jaime Fuentes and I am a web developer.</p>
+        <div class="socialContainer">
+            <a href="https://www.linkedin.com/in/jaime-fuentes-3a3b3b1b3/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="socialIcon"/></a>
+            <a href="https://www.linkedin.com/in/jaime-fuentes-3a3b3b1b3/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="socialIcon"/></a>
         </div>
     </section>
 
-    <section id="hobbies">
-        <h3>Hobbies</h3>
-        <p>
-            I am also passionate about <a href="path/to/your/photography/page.html">photography</a> as a personal hobby. Feel free to explore my photography portfolio.
-        </p>
-    </section>
-
-    <footer> -->
-        <!-- Add contact information, social media links, or a contact form here -->
-    <!-- </footer> -->
 </body>
+
 
 </html>

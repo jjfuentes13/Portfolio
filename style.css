@@ -6,16 +6,23 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-header, 
+/* header and nav landing page*/
+
+nav,
     .navLinks {
     display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 13vh;
 }
 
 .navLinks {
@@ -23,6 +30,11 @@ header,
     gap: 2rem;
     font-size: 1.2rem;      
 }
+
+p {
+    font-size: 2.1rem;
+}
+
 a,
     .btn {
         transition: all 0.3s ease;  
@@ -37,13 +49,132 @@ a {
 a:hover {
     color: #949494;    
     text-decoration-color: rgb(181,181,181);
-    text-underline-offset: 1rem;
+    text-underline-offset: 10px;
     text-decoration: underline;
 }           
 
-header {
-    justify-content: space-around;
-    align-items: center;
-    height: 13vh;
+
+/* Hamburger menu */
+
+#mobileNav {
+    display: none;
+}  
+
+.hamburgerMenu {
+    position: relative;
+    display: inline-block;
 }
 
+.hamburgerIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;    
+    cursor: pointer;
+}
+
+.hamburgerIcon span {
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuLinks {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuLinks a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; 
+}
+
+.menuLinks li {
+    list-style: none;
+}
+
+.menuLinks.active {
+    max-height: 350px;
+}
+
+.hamburgerIcon.active span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburgerIcon.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburgerIcon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburgerIcon span:first-child {
+    transform: none;
+}
+.hamburgerIcon span:nth-child(2) {
+    opacity: 1;
+}
+.hamburgerIcon span:nth-child(3) {
+    transform: none;
+}
+
+/* sections  */
+section {
+    margin: 40px;
+}
+
+/* bio sections */
+
+.profilePicContainer {
+    display: flex;
+    align-items: center;
+    padding: 80px 20px 20px 0;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.socialContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.bioPic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h4 {
+    padding-top: 70px;
+    font-size: 2.5rem;
+}
+
+/* media queries */
+@media screen and (max-width: 450px) {
+    #desktopNav {
+        display: none;
+    }
+    
+    #mobileNav {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+}
